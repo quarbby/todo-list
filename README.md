@@ -6,7 +6,7 @@ With tutorials from [fullstackJS](http://www.fullstackjs.com/book/5/scaffold-tod
 * Express (express-generator)
 * Handlebars (express-handlebars)
 * Sass (node-sass-middleware)
-* 
+* Browserify (browserify-middleware)
 
 ### Running the App
 * git clone 
