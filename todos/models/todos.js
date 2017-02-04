@@ -1,7 +1,11 @@
-var todos = [
-    'buy flight tickets',
-    'book a hotel room',
-    'pack your bags'
-];
+var mongoose = require('mongoose');
 
-module.exports = todos;
+var Schema = mongoose.Schema;
+
+var TodoSchema = new Schema({
+    text: {type: 'String', required: true},
+    done: {type: 'Boolean'}
+});
+
+var Todo = mongoose.model('Todo', TodoSchema);
+module.exports = Todo;

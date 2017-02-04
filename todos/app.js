@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var mongoose = require('mongoose');
 var sassMiddleware = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
 
@@ -30,6 +31,10 @@ app.use(
 
 // browserify setup
 app.get('/javascripts/bundle.js', browserify('./client/script.js'));
+
+// mongoose set up 
+var dbConnectionString = process.env.MONGODB_URI || 'mongodb://localhost';
+mongoose.connect(dbConnectionString + '/todos');
 
 // browser-sync setup
 if (app.get('env') == 'development') {
