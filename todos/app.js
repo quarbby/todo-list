@@ -1,5 +1,6 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
+var sassMiddleware = require('node-sass-middleware');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -15,6 +16,14 @@ var app = express();
 // view engine setup
 app.engine('hbs', exphbs({extname: '.hbs', defaultLayout: 'layout'}));
 app.set('view engine', 'hbs');
+
+app.use(
+  sassMiddleware({
+    src: __dirname + '/sass',
+    dest: __dirname + '/public',
+    debug: true
+  })
+);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
