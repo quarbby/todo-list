@@ -12,6 +12,7 @@ With tutorials from [fullstackJS](http://www.fullstackjs.com/book/5/scaffold-tod
 * Mongoose (mongoose)
 * Bluebird for promises (bluebird)
 * [Postman] (https://www.getpostman.com)
+* Handlebars for Browserify (hbsfy handlebars)
 
 ### Running the App
 * git clone 
