@@ -7,6 +7,8 @@ With tutorials from [fullstackJS](http://www.fullstackjs.com/book/5/scaffold-tod
 * Handlebars (express-handlebars)
 * Sass (node-sass-middleware)
 * Browserify (browserify-middleware)
+* Nodemon (nodemon)
+* Browser-sync (browser-sync, connect-browser-sync)
 
 ### Running the App
 * git clone 
