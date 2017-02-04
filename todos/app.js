@@ -3,6 +3,8 @@ var exphbs = require('express-handlebars');
 var mongoose = require('mongoose');
 var sassMiddleware = require('node-sass-middleware');
 var browserify = require('browserify-middleware');
+var Promise = require('bluebird');
+Promise.promisifyAll(mongoose);
 
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -12,7 +14,8 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var todos = require('./routes/todos');
+var todos = require('./routes/todos/index');
+var todosAPI = require('./routes/todos/api');
 
 var app = express();
 
@@ -61,6 +64,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/todos', todos);
+app.use('/api/todos', todosAPI);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

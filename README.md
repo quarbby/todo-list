@@ -10,6 +10,8 @@ With tutorials from [fullstackJS](http://www.fullstackjs.com/book/5/scaffold-tod
 * Nodemon (nodemon)
 * Browser-sync (browser-sync, connect-browser-sync)
 * Mongoose (mongoose)
+* Bluebird for promises (bluebird)
+* [Postman] (https://www.getpostman.com)
 
 ### Running the App
 * git clone 
