@@ -5,7 +5,7 @@ var Todo = require('../../models/todos');
 
 router.route('/')
     .get(function(req, res, next){
-        Todo.findAsync({})
+        Todo.findAsync({}, null, {sort: {"_id": 1}})
         .then(function(todos){
             res.json(todos);
         })
