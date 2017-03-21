@@ -25,4 +25,4 @@ With tutorials from [fullstackJS](http://www.fullstackjs.com/book/5/scaffold-tod
 
 
 ### Screenshot
-![screenshot](!Screenshot.png)
+![screenshot](Screenshot.png)
